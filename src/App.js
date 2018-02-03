@@ -24,7 +24,7 @@ class App extends Component {
         </div>
 
 
-        <Route path="/" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route path="/stateless" component={Category} />
         <Route path="/propsexample" component={PropsExample} />
         <Route path="/formsexample" component={Form} />
