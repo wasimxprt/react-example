@@ -6,9 +6,9 @@ import { Header } from "./components/Common/Header";
 import { Category } from "./components/Category/Category";
 import { Home } from "./components/Home/Home";
 
-
 import PropsExample from './components/PropsExample/PropsExample';
 import Form from './components/Form/Form';
+import EventHandler from "./components/EventHandler/EventHandler";
 
 
 
@@ -28,6 +28,7 @@ class App extends Component {
         <Route path="/stateless" component={Category} />
         <Route path="/propsexample" component={PropsExample} />
         <Route path="/formsexample" component={Form} />
+        <Route path="/eventsexample" component={EventHandler} />
 
       </div>
     )

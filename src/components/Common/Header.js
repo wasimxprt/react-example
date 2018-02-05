@@ -12,6 +12,7 @@ export const Header = () => {
                         <li><Link to="/stateless">Stateless Component</Link></li>
                         <li><Link to="/propsexample">Props</Link></li>
                         <li><Link to="/formsexample">Forms</Link></li>
+                        <li><Link to="/eventsexample">Event Handling</Link></li>
                     </ul>
                 </div>
             </div>
