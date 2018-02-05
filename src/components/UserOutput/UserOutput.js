@@ -3,13 +3,15 @@ import './UserOutput.css';
 
 const userOutput = (props) => {
     return (
-        <div className="row">
-            <form>
-                <div className="form-group col-md-4">
-                    <p>Username is {props.username}</p>
-                </div>
-            </form>
-
+        <div>
+            <div className="row">
+                <div className="col-xs-8">
+                    <form className="">
+                        <div className="form-group">
+                            <p>Username is {props.username}</p>
+                        </div>
+                    </form>
+                </div></div>
         </div>
     )
 }

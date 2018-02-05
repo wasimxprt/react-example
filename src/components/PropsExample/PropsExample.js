@@ -31,8 +31,13 @@ class PropsExample extends Component {
 
         return (
             <div>
-                <UserInput change={this.changehandler} username={this.state.username} />
-                <UserOutput username={this.state.username} />
+                <div className="row">
+                    <div className="col-xs-8 col-xs-offset-1">
+                        <h1>Props Example</h1>
+                        <UserInput change={this.changehandler} username={this.state.username} />
+                        <UserOutput username={this.state.username} />
+                    </div>
+                </div>
             </div>
         );
     }

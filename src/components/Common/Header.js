@@ -13,6 +13,8 @@ export const Header = () => {
                         <li><Link to="/propsexample">Props</Link></li>
                         <li><Link to="/formsexample">Forms</Link></li>
                         <li><Link to="/eventsexample">Event Handling</Link></li>
+                        <li><Link to="/async">Get Post</Link></li>
+                        <li><Link to="/add-post">Create Post</Link></li>
                     </ul>
                 </div>
             </div>

@@ -58,30 +58,36 @@ class Form extends Component {
     render() {
 
         return (
-            <div className="row">
+            <div className="">
 
-                <div className="panel panel-default">
-                    <FormErrors formErrors={this.state.formErrors} />
+                <div className="row">
+                    <div className="col-xs-8 col-xs-8 col-xs-offset-1">
+
+                        <div className="panel panel-default">
+                            <FormErrors formErrors={this.state.formErrors} />
+                        </div>
+
+                        <form className="">
+                            <h1>Forms Validation</h1>
+                            <div className={`form-group ${this.errorClass(this.state.formErrors.email)}`}>
+                                <label htmlFor="exampleInputEmail1">Email address</label>
+                                <input type="email" onChange={(event) => this.handleUserInput(event)} className="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email" value={this.state.email} />
+                            </div>
+                            <div className={`form-group ${this.errorClass(this.state.formErrors.password)}`}>
+                                <label htmlFor="exampleInputPassword1">Password</label>
+                                <input type="password" onChange={(event) => this.handleUserInput(event)} className="form-control" id="password" name="password" placeholder="Password" />
+                            </div>
+                            <div className="form-check">
+                                <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                                <label className="form-check-label" htmlFor="exampleCheck1"> &nbsp;&nbsp;Remember me</label>
+                            </div>
+
+                            <button type="submit" className="btn btn-primary"
+                                disabled={!this.state.formValid}>Sign In</button>
+                        </form>
+                    </div >
                 </div>
-
-                <form className="col-md-6">
-                    <div className={`form-group ${this.errorClass(this.state.formErrors.email)}`}>
-                        <label htmlFor="exampleInputEmail1">Email address</label>
-                        <input type="email" onChange={(event) => this.handleUserInput(event)} className="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email" value={this.state.email} />
-                    </div>
-                    <div className={`form-group ${this.errorClass(this.state.formErrors.password)}`}>
-                        <label htmlFor="exampleInputPassword1">Password</label>
-                        <input type="password" onChange={(event) => this.handleUserInput(event)} className="form-control" id="password" name="password" placeholder="Password" />
-                    </div>
-                    <div className="form-check">
-                        <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                        <label className="form-check-label" htmlFor="exampleCheck1"> &nbsp;&nbsp;Remember me</label>
-                    </div>
-
-                    <button type="submit" className="btn btn-primary"
-                        disabled={!this.state.formValid}>Sign In</button>
-                </form>
-            </div >
+            </div>
         );
     }
 };

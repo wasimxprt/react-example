@@ -5,8 +5,8 @@ import './Event.css';
 
 class EventHandler extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
     }
 
     state = {
@@ -54,23 +54,48 @@ class EventHandler extends Component {
 
         return (
             <div>
-                <h2>Event Handler</h2>
+                <div className="row">
+                    <div className="col-xs-8 col-xs-offset-1">
+                        <form className="">
+                            <h2>Event Handler</h2>
 
-                <input type="text" onChange={this.nameChangeHandler} value={this.state.userInput} />
+                            <div className="form-group">
+                                <label className="control-label"></label>
+                                <input type="text" className="form-control" onChange={this.nameChangeHandler} value={this.state.userInput} />
+                            </div>
 
-                <input type="checkbox" onChange={this.addStylehandler} value="red" />Red
-        <input type="checkbox" onChange={this.addStylehandler} value="bold" />Bold
-        <input type="checkbox" onChange={this.addStylehandler} value="green" />Green
+                            <div className="form-check form-check-inline">
+                                <input type="checkbox" onChange={this.addStylehandler} value="red" />
+                                <label className="form-check-label" for="inlineCheckbox1">&nbsp;&nbsp;&nbsp;Red</label>
+                            </div>
+                            <div className="form-check form-check-inline">
+                                <input type="checkbox" onChange={this.addStylehandler} value="bold" />
+                                <label className="form-check-label" for="inlineCheckbox2">&nbsp;&nbsp;&nbsp;Bold</label>
+                            </div>
+                            <div className="form-check form-check-inline">
+                                <input type="checkbox" onChange={this.addStylehandler} value="green" />
+                                <label className="form-check-label" for="inlineCheckbox3"> &nbsp;&nbsp;&nbsp;Green</label>
+                            </div>
 
-        <p className="App-intro">
-                    {this.state.userInput}
-                </p>
-                <Validation
-                    inputLength={this.state.userInput.length}
-                    activeClass={this.state.activeClass}
-                />
-                {charList}
+                        </form>
+                    </div>
+
+                </div>
+
+                <div className="row">
+                    <div className="col-xs-8 col-xs-offset-1">
+                        <p className="App-intro">
+                            {this.state.userInput}
+                        </p>
+                        <Validation
+                            inputLength={this.state.userInput.length}
+                            activeClass={this.state.activeClass}
+                        />
+                        {charList}
+                    </div>
+                </div>
             </div>
+
         )
     }
 }

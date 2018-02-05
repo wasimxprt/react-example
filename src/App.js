@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Route, Switch } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import './App.css';
 
 import { Header } from "./components/Common/Header";
@@ -9,6 +9,8 @@ import { Home } from "./components/Home/Home";
 import PropsExample from './components/PropsExample/PropsExample';
 import Form from './components/Form/Form';
 import EventHandler from "./components/EventHandler/EventHandler";
+import Async from "./components/Async/AsyncAPI";
+import AddPost from "./components/Async/AddPost"
 
 
 
@@ -29,6 +31,8 @@ class App extends Component {
         <Route path="/propsexample" component={PropsExample} />
         <Route path="/formsexample" component={Form} />
         <Route path="/eventsexample" component={EventHandler} />
+        <Route path="/async" component={Async} />
+        <Route path="/add-post" component={AddPost} />
 
       </div>
     )
